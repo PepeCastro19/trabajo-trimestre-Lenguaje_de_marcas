@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web4U - HTML: 5 Etiquetas Clave</title>
+    
+    <meta name="description" content="Información detallada sobre 5 etiquetas y atributos clave de HTML5: footer, details, picture, aria-label y form.">
+    <meta name="keywords" content="HTML, Etiquetas, Semántica, Accesibilidad, Formularios">
+    <meta name="author" content="IES La Marisma, Práctica 1T 2025/26">
+
+    <link rel="stylesheet" href="../recursos/style/style.css">
+    
+    <link rel="alternate" hreflang="en" href="index_english.html" /> 
+</head>
+<body>
+    <header>
+        <h1>HTML: Lenguaje de Marcado de Hipertexto</h1>
+        <nav aria-label="Navegación del Sitio" class="main-nav">
+            <a href="../index.html" title="Volver a la página principal">🏠 Inicio</a>
+            <span>/</span>
+            <a href="index.html" class="active" title="Estás en la sección de HTML">HTML</a>
+             <a href="index_english.html" title="Switch to English">🇬🇧 English</a>
+        <link rel="alternate" hreflang="en" href="index_english.html"/>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <aside id="toc">
+            <h2>Tabla de Contenidos</h2>
+            <ul>
+                <li><a href="#footer-tag" title="Ir a la explicación de la etiqueta footer">1. Etiqueta `&lt;footer&gt;`</a></li>
+                <li><a href="#details-tag" title="Ir a la explicación de la etiqueta details">2. Etiqueta `&lt;details&gt;`</a></li>
+                <li><a href="#picture-tag" title="Ir a la explicación de la etiqueta picture">3. Etiqueta `&lt;picture&gt;`</a></li>
+                <li><a href="#aria-attribute" title="Ir a la explicación del atributo aria-label">4. Atributo `aria-label`</a></li>
+                <li><a href="#form-tag" title="Ir a la explicación de la etiqueta form">5. Etiqueta `&lt;form&gt;`</a></li>
+            </ul>
+            
+            <hr>
+            
+            <p>
+                <strong>Recursos:</strong><br>
+                <a href="html_info.pdf" target="_blank" title="Descargar contenido en PDF (Recurso externo)">⬇️ Descargar PDF</a>
+            </p>
+        </aside>
+
+        <main>
+            <h2>5 Etiquetas y Atributos HTML Esenciales</h2>
+
+            <section id="footer-tag" class="tag-section">
+                <h3>1. Etiqueta `&lt;footer&gt;`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Define el pie de página de un documento o sección. Típicamente contiene información de autoría, derechos de autor, datos de contacto o enlaces relacionados.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;article&gt;
+    &lt;h2&gt;Título del Artículo&lt;/h2&gt;
+    &lt;p&gt;Contenido...&lt;/p&gt;
+    &lt;footer&gt;
+        &lt;p&gt;Escrito por: Juan Pérez&lt;/p&gt;
+        &lt;p&gt;&copy; 2025 Derechos Reservados&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>Más Información</h4>
+                <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-footer-element" target="_blank" title="Documentación W3C sobre la etiqueta Footer">W3C: Elemento `&lt;footer&gt;`</a>
+            </section>
+
+            <section id="details-tag" class="tag-section">
+                <h3>2. Etiquetas `&lt;details&gt;` y `&lt;summary&gt;`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Crea un widget interactivo que el usuario puede abrir y cerrar. `&lt;summary&gt;` define el encabezado visible, y el contenido dentro de `&lt;details&gt;` se muestra solo al expandirlo.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;details&gt;
+    &lt;summary&gt;Más información...&lt;/summary&gt;
+    &lt;p&gt;Este texto está oculto hasta que el usuario hace clic en el resumen.&lt;/p&gt;
+&lt;/details&gt;
+                    </code></pre>
+                </div>
+
+            
+                
+                <h4>Más Información</h4>
+                <a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element" target="_blank" title="Documentación W3C sobre la etiqueta Details">W3C: Elemento `&lt;details&gt;`</a>
+            </section>
+
+            <section id="picture-tag" class="tag-section">
+                <h3>3. Etiqueta `&lt;picture&gt;`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Permite especificar múltiples fuentes de imagen para diferentes situaciones (distintos tamaños de pantalla o formatos de archivo), mejorando el rendimiento y la adaptabilidad (Diseño Responsivo).</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;picture&gt;
+    &lt;source srcset="img-grande.jpg" media="(min-width: 800px)"&gt;
+    &lt;img src="img-pequena.jpg" alt="Descripción de la imagen"&gt;
+&lt;/picture&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>Más Información</h4>
+                <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element" target="_blank" title="Documentación W3C sobre la etiqueta Picture">W3C: Elemento `&lt;picture&gt;`</a>
+            </section>
+
+            <section id="aria-attribute" class="tag-section">
+                <h3>4. Atributo `aria-label`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Proporciona una etiqueta accesible para elementos que no tienen texto visible en pantalla (como botones de iconos). Es fundamental para que los lectores de pantalla interpreten correctamente la interfaz.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;!-- Botón con icono de lupa, sin texto visible --&gt;
+&lt;button aria-label="Buscar contenido"&gt;
+    &lt;svg&gt;...&lt;/svg&gt;
+&lt;/button&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>Más Información</h4>
+                <a href="https://www.w3.org/TR/wai-aria/#aria-label" target="_blank" title="Documentación WAI-ARIA sobre aria-label">W3C: Atributo `aria-label`</a>
+            </section>
+
+            <section id="form-tag" class="tag-section">
+                <h3>5. Etiqueta `&lt;form&gt;`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Crea una sección interactiva para recoger datos del usuario y enviarlos a un servidor. Agrupa elementos como campos de texto, casillas de verificación y botones de envío.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;form action="/enviar" method="POST"&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre" required&gt;
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>Más Información</h4>
+                <a href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element" target="_blank" title="Documentación W3C sobre la etiqueta Form">W3C: Elemento `&lt;form&gt;`</a>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p><a href="#toc" title="Volver al inicio de la página">↑ Subir</a></p>
+        <p>&copy; 2025 Web4U. Práctica de Lenguajes de Marcas. IES La Marisma.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web4U - CSS: 5 Propiedades Clave</title>
+    
+    <meta name="description" content="Guía detallada sobre 5 propiedades esenciales de CSS: Flexbox, Grid, Sombras, Variables y Diseño Responsivo.">
+    <meta name="keywords" content="CSS, Flexbox, Grid, box-shadow, media queries, variables css">
+    <meta name="author" content="IES La Marisma, Práctica 1T 2025/26">
+
+    <link rel="stylesheet" href="../recursos/style/style.css">
+    
+    <link rel="alternate" hreflang="en" href="index_english.html" /> 
+</head>
+<body>
+    <header>
+        <h1>CSS: Hojas de Estilo en Cascada</h1>
+        <nav aria-label="Navegación del Sitio" class="main-nav">
+            <a href="../index.html" title="Volver a la página de inicio">🏠 Inicio</a>
+            <span>/</span>
+            <a href="index.html" class="active" title="Estás explorando la sección de CSS">CSS</a>
+
+             <a href="index_english.html" title="Switch to English">🇬🇧 English</a>
+        <link rel="alternate" hreflang="en" href="index_english.html"/>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <aside id="toc">
+            <h2>Tabla de Contenidos</h2>
+            <ul>
+                <li><a href="#flexbox" title="Ir a la explicación de Flexbox">1. Propiedad `display: flex`</a></li>
+                <li><a href="#grid" title="Ir a la explicación de Grid Layout">2. Propiedad `grid-template-areas`</a></li>
+                <li><a href="#shadow" title="Ir a la explicación de Sombras">3. Propiedad `box-shadow`</a></li>
+                <li><a href="#variables" title="Ir a la explicación de Variables CSS">4. Selector `:root` (Variables)</a></li>
+                <li><a href="#media" title="Ir a la explicación de Media Queries">5. Regla `@media`</a></li>
+            </ul>
+            
+            <hr>
+            
+            <p>
+                <strong>Recursos:</strong><br>
+                <a href="css_info.pdf" target="_blank" title="Descargar el contenido de esta página en formato PDF (Recurso externo)">⬇️ Descargar PDF</a>
+            </p>
+        </aside>
+
+        <main>
+            <h2>5 Propiedades CSS Esenciales</h2>
+            [cite_start]<p>A continuación se detallan cinco herramientas fundamentales para el diseño web moderno, enfocadas en la maquetación y la estética[cite: 15].</p>
+
+            <section id="flexbox" class="tag-section">
+                <h3>1. Propiedad `display: flex`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Activa el modelo **Flexbox**. Es ideal para diseños unidimensionales (una fila o una columna). Se usa comúnmente para alinear elementos dentro de una barra de navegación o centrar contenido vertical y horizontalmente dentro de un contenedor.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+.contenedor {
+    display: flex;             /* Activa Flexbox */
+    justify-content: center;   /* Centra horizontalmente */
+    align-items: center;       /* Centra verticalmente */
+    gap: 20px;                 /* Espacio entre elementos */
+}
+                    </code></pre>
+                </div>
+
+          
+                
+                <h4>Más Información</h4>
+                <a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank" title="Documentación oficial W3C sobre Flexbox">W3C: Módulo de Diseño de Cajas Flexibles</a>
+            </section>
+
+            <section id="grid" class="tag-section">
+                <h3>2. Propiedad `grid-template-areas`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Parte del sistema **CSS Grid Layout**. Permite definir la estructura de una página web nombrando áreas específicas (como 'header', 'main', 'footer') y asignándolas visualmente en una cuadrícula. Es perfecto para maquetaciones complejas en dos dimensiones.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+.contenedor-grid {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+.cabecera { grid-area: header; }
+.contenido { grid-area: main; }
+                    </code></pre>
+                </div>
+
+            
+                
+                <h4>Más Información</h4>
+                <a href="https://www.w3.org/TR/css-grid-1/#grid-template-areas-property" target="_blank" title="Documentación oficial W3C sobre Grid Template Areas">W3C: Definición de Áreas de Cuadrícula</a>
+            </section>
+
+            <section id="shadow" class="tag-section">
+                <h3>3. Propiedad `box-shadow`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Añade efectos de sombra alrededor del marco de un elemento. Se utiliza para crear profundidad, destacar tarjetas ("cards") sobre el fondo o indicar que un botón es interactivo al pasar el ratón por encima.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+.tarjeta {
+    background-color: white;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+                    </code></pre>
+                </div>
+
+                
+                <h4>Más Información</h4>
+                <a href="https://www.w3.org/TR/css-backgrounds-3/#box-shadow" target="_blank" title="Documentación oficial W3C sobre Box Shadow">W3C: Sombras de Caja</a>
+            </section>
+
+            <section id="variables" class="tag-section">
+                <h3>4. Selector `:root` (Custom Properties)</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Define variables globales (propiedades personalizadas) que pueden reutilizarse en todo el documento. Es fundamental para mantener la coherencia en los colores, fuentes y tamaños, y facilita enormemente la implementación de temas (como el modo oscuro).</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+:root {
+    --color-principal: #3498db;
+    --fuente-base: 'Arial', sans-serif;
+}
+
+h1 {
+    color: var(--color-principal); /* Usa la variable */
+    font-family: var(--fuente-base);
+}
+                    </code></pre>
+                </div>
+
+              
+                
+                <h4>Más Información</h4>
+                <a href="https://www.w3.org/TR/css-variables-1/" target="_blank" title="Documentación oficial W3C sobre Variables CSS">W3C: Propiedades Personalizadas en Cascada</a>
+            </section>
+
+            <section id="media" class="tag-section">
+                <h3>5. Regla `@media`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Permite aplicar diferentes estilos CSS dependiendo de las características del dispositivo, principalmente el ancho de la pantalla (`min-width` o `max-width`). Es la base del **Diseño Web Responsivo**.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    body {
+        background-color: lightgray;
+        font-size: 14px;
+    }
+}
+                    </code></pre>
+                </div>
+
+                
+                <h4>Más Información</h4>
+                <a href="https://www.w3.org/TR/mediaqueries-4/" target="_blank" title="Documentación oficial W3C sobre Media Queries">W3C: Consultas de Medios (Media Queries)</a>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p><a href="#toc" title="Volver al inicio de la página">↑ Subir</a></p>
+        <p>&copy; 2025 Web4U. Práctica de Lenguajes de Marcas. IES La Marisma.</p>
+    </footer>
+</body>
+</html>

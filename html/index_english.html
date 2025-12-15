@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web4U - HTML: 5 Key Tags</title>
+    
+    <meta name="description" content="Detailed information about 5 key HTML5 tags and attributes: footer, details, picture, aria-label, and form.">
+    <meta name="keywords" content="HTML, Tags, Semantics, Accessibility, Forms">
+    <meta name="author" content="IES La Marisma, 1Q 2025/26 Practice">
+
+    <link rel="stylesheet" href="../recursos/style/style.css">
+    
+    <link rel="alternate" hreflang="es" href="index.html" /> 
+</head>
+<body>
+    <header>
+        <h1>HTML: HyperText Markup Language</h1>
+        <nav aria-label="Site Navigation" class="main-nav">
+            <a href="../index_english.html" title="Go back to the home page">🏠 Home</a>
+            <span>/</span>
+            <a href="index_english.html" class="active" title="You are in the HTML section">HTML</a>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <aside id="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#footer-tag" title="Jump to the explanation of the footer tag">1. Tag `&lt;footer&gt;`</a></li>
+                <li><a href="#details-tag" title="Jump to the explanation of the details tag">2. Tag `&lt;details&gt;`</a></li>
+                <li><a href="#picture-tag" title="Jump to the explanation of the picture tag">3. Tag `&lt;picture&gt;`</a></li>
+                <li><a href="#aria-attribute" title="Jump to the explanation of the aria-label attribute">4. Attribute `aria-label`</a></li>
+                <li><a href="#form-tag" title="Jump to the explanation of the form tag">5. Tag `&lt;form&gt;`</a></li>
+            </ul>
+            
+            <hr>
+            
+            <p>
+                <strong>Resources:</strong><br>
+                <a href="html_info.pdf" target="_blank" title="Download content in PDF (External resource)">⬇️ Download PDF</a>
+            </p>
+        </aside>
+
+        <main>
+            <h2>5 Essential HTML Tags and Attributes</h2>
+
+            <section id="footer-tag" class="tag-section">
+                <h3>1. Tag `&lt;footer&gt;`</h3>
+                
+                <h4>Use Case</h4>
+                <p>Defines the footer of a document or section. It typically contains authorship information, copyright data, contact details, or related links.</p>
+                
+                <h4>Example Code</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;article&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;p&gt;Content...&lt;/p&gt;
+    &lt;footer&gt;
+        &lt;p&gt;Written by: John Doe&lt;/p&gt;
+        &lt;p&gt;&copy; 2025 All Rights Reserved&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>More Information</h4>
+                <a href="https://html.spec.whatwg.org/multipage/semantics.html#the-footer-element" target="_blank" title="W3C Documentation on the Footer tag">W3C: Element `&lt;footer&gt;`</a>
+            </section>
+
+            <section id="details-tag" class="tag-section">
+                <h3>2. Tags `&lt;details&gt;` and `&lt;summary&gt;`</h3>
+                
+                <h4>Use Case</h4>
+                <p>Creates an interactive widget that the user can open and close. `&lt;summary&gt;` defines the visible header, and the content inside `&lt;details&gt;` is shown only when expanded.</p>
+                
+                <h4>Example Code</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;details&gt;
+    &lt;summary&gt;More information...&lt;/summary&gt;
+    &lt;p&gt;This text is hidden until the user clicks on the summary.&lt;/p&gt;
+&lt;/details&gt;
+                    </code></pre>
+                </div>
+
+            
+                
+                <h4>More Information</h4>
+                <a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element" target="_blank" title="W3C Documentation on the Details tag">W3C: Element `&lt;details&gt;`</a>
+            </section>
+
+            <section id="picture-tag" class="tag-section">
+                <h3>3. Tag `&lt;picture&gt;`</h3>
+                
+                <h4>Use Case</h4>
+                <p>Allows specifying multiple image sources for different situations (different screen sizes or file formats), improving performance and adaptability (Responsive Design).</p>
+                
+                <h4>Example Code</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;picture&gt;
+    &lt;source srcset="img-large.jpg" media="(min-width: 800px)"&gt;
+    &lt;img src="img-small.jpg" alt="Image description"&gt;
+&lt;/picture&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>More Information</h4>
+                <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element" target="_blank" title="W3C Documentation on the Picture tag">W3C: Element `&lt;picture&gt;`</a>
+            </section>
+
+            <section id="aria-attribute" class="tag-section">
+                <h3>4. Attribute `aria-label`</h3>
+                
+                <h4>Use Case</h4>
+                <p>Provides an accessible label for elements that do not have visible text on the screen (such as icon buttons). It is fundamental for screen readers to correctly interpret the interface.</p>
+                
+                <h4>Example Code</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;!-- Button with search icon, no visible text --&gt;
+&lt;button aria-label="Search content"&gt;
+    &lt;svg&gt;...&lt;/svg&gt;
+&lt;/button&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>More Information</h4>
+                <a href="https://www.w3.org/TR/wai-aria/#aria-label" target="_blank" title="WAI-ARIA Documentation on aria-label">W3C: Attribute `aria-label`</a>
+            </section>
+
+            <section id="form-tag" class="tag-section">
+                <h3>5. Tag `&lt;form&gt;`</h3>
+                
+                <h4>Use Case</h4>
+                <p>Creates an interactive section to collect user data and send it to a server. It groups elements like text fields, checkboxes, and submit buttons.</p>
+                
+                <h4>Example Code</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;form action="/submit" method="POST"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>More Information</h4>
+                <a href="https://html.spec.whatwg.org/multipage/forms.html#the-form-element" target="_blank" title="W3C Documentation on the Form tag">W3C: Element `&lt;form&gt;`</a>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p><a href="#toc" title="Back to top">↑ Top</a></p>
+        <p>&copy; 2025 Web4U. Markup Languages Practice. IES La Marisma.</p>
+    </footer>
+</body>
+</html>

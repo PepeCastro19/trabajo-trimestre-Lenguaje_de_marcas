@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../recursos/style/style.css">
+    <title>Web4U - SVG: 5 Etiquetas Clave</title>
+    
+    
+    <meta name="description" content="Información detallada sobre 5 etiquetas clave de SVG: svg, circle, rect, g y path.">
+    <meta name="keywords" content="SVG, Gráficos Vectoriales, Etiquetas, Código, Tutorial">
+    [cite_start]<meta name="author" content="IES La Marisma, Práctica 1T 2025/26 [cite: 7]">
+
+    
+    <link rel="stylesheet" href="../style/style.css">
+    
+    <link rel="alternate" hreflang="en" href="index_english.html" /> 
+</head>
+<body>
+    <header>
+        <h1>SVG: Gráficos Vectoriales Escalables</h1>
+        <nav aria-label="Navegación del Sitio" class="main-nav">
+            <a href="../index.html" title="Volver a la página principal">🏠 Inicio</a>
+            <span>/</span>
+            <a href="index.html" class="active" title="Estás en la sección de SVG">SVG</a>
+             <a href="index_english.html" title="Switch to English">🇬🇧 English</a>
+        <link rel="alternate" hreflang="en" href="index_english.html"/>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <aside id="toc">
+            <h2>Tabla de Contenidos</h2>
+            <ul>
+                <li><a href="#svg-tag" title="Ir a la explicación de la etiqueta svg">1. Etiqueta `&lt;svg&gt;`</a></li>
+                <li><a href="#circle-tag" title="Ir a la explicación de la etiqueta circle">2. Etiqueta `&lt;circle&gt;`</a></li>
+                <li><a href="#rect-tag" title="Ir a la explicación de la etiqueta rect">3. Etiqueta `&lt;rect&gt;`</a></li>
+                <li><a href="#g-tag" title="Ir a la explicación de la etiqueta g">4. Etiqueta `&lt;g&gt;`</a></li>
+                <li><a href="#path-tag" title="Ir a la explicación de la etiqueta path">5. Etiqueta `&lt;path&gt;`</a></li>
+            </ul>
+            
+            <hr>
+            
+            <p>
+                <strong>Recursos:</strong><br>
+                <a href="svg_info.pdf" target="_blank" title="Descargar contenido en PDF (Recurso externo)">⬇️ Descargar PDF</a>
+            </p>
+        </aside>
+
+        <main>
+            [cite_start]<h2>5 Etiquetas SVG Esenciales [cite: 15]</h2>
+
+            <section id="svg-tag" class="tag-section">
+                <h3>1. Etiqueta `&lt;svg&gt;`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Es el contenedor principal para todos los gráficos. Define el lienzo, el ancho, la altura y el sistema de coordenadas (viewBox) donde se dibujarán los vectores.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;svg width="200" height="200" viewBox="0 0 100 100"&gt;
+    &lt;!-- El contenido gráfico iría aquí --&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                </div>
+
+                
+                
+                <h4>Más Información</h4>
+                [cite_start]<a href="https://www.w3.org/TR/SVG2/struct.html#SVGElement" target="_blank" title="Documentación W3C sobre la etiqueta SVG [cite: 15]">W3C: Elemento `&lt;svg&gt;`</a>
+            </section>
+
+            <section id="circle-tag" class="tag-section">
+                <h3>2. Etiqueta `&lt;circle&gt;`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Se utiliza para dibujar círculos simples. Se define mediante un punto central (cx, cy) y un radio (r).</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                </div>
+
+                
+                
+                <h4>Más Información</h4>
+                [cite_start]<a href="https://www.w3.org/TR/SVG2/shapes.html#CircleElement" target="_blank" title="Documentación W3C sobre la etiqueta Circle [cite: 15]">W3C: Elemento `&lt;circle&gt;`</a>
+            </section>
+
+            <section id="rect-tag" class="tag-section">
+                <h3>3. Etiqueta `&lt;rect&gt;`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Dibuja rectángulos. Se especifican la posición de la esquina superior izquierda (x, y), el ancho y la altura. También permite esquinas redondeadas.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;svg width="150" height="100"&gt;
+    &lt;rect x="10" y="10" width="100" height="50" fill="blue" /&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                </div>
+
+                
+                
+                <h4>Más Información</h4>
+                [cite_start]<a href="https://www.w3.org/TR/SVG2/shapes.html#RectElement" target="_blank" title="Documentación W3C sobre la etiqueta Rect [cite: 15]">W3C: Elemento `&lt;rect&gt;`</a>
+            </section>
+
+            <section id="g-tag" class="tag-section">
+                <h3>4. Etiqueta `&lt;g&gt;`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Se usa para agrupar múltiples elementos SVG. Es muy útil para aplicar estilos (como color de trazo) o transformaciones (rotar, mover) a varios objetos a la vez.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;svg width="200" height="200"&gt;
+    &lt;g fill="none" stroke="green" stroke-width="5"&gt;
+        &lt;circle cx="50" cy="50" r="25" /&gt;
+        &lt;circle cx="100" cy="50" r="25" /&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                </div>
+
+                
+                
+                <h4>Más Información</h4>
+                [cite_start]<a href="https://www.w3.org/TR/SVG2/struct.html#GElement" target="_blank" title="Documentación W3C sobre la etiqueta Group [cite: 15]">W3C: Elemento `&lt;g&gt;`</a>
+            </section>
+
+            <section id="path-tag" class="tag-section">
+                <h3>5. Etiqueta `&lt;path&gt;`</h3>
+                
+                <h4>Caso de Uso</h4>
+                <p>Es la herramienta más poderosa de SVG. Permite dibujar formas complejas mediante una serie de comandos de dibujo (Mover, Línea, Curva, Cerrar) dentro del atributo `d`.</p>
+                
+                <h4>Código de Ejemplo</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;svg width="100" height="100"&gt;
+    &lt;!-- Dibuja un triángulo --&gt;
+    &lt;path d="M 50 10 L 90 90 L 10 90 Z" fill="orange" /&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                </div>
+
+            
+                
+                <h4>Más Información</h4>
+                [cite_start]<a href="https://www.w3.org/TR/SVG2/paths.html#PathElement" target="_blank" title="Documentación W3C sobre la etiqueta Path [cite: 15]">W3C: Elemento `&lt;path&gt;`</a>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p><a href="#toc" title="Volver al inicio de la página">↑ Subir</a></p>
+        <p>&copy; 2025 Web4U. Práctica de Lenguajes de Marcas. IES La Marisma.</p>
+    </footer>
+</body>
+</html>

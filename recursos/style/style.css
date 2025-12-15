@@ -1,0 +1,172 @@
+/* style/style.css */
+
+/* General Styles and Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+header {
+    background: #007bff; /* Primary Blue */
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+/* Navigation - Breadcrumbs and "You are here" */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: #0056b3;
+}
+
+/* Active State (You are here) */
+.main-nav a.active {
+    background-color: #28a745; /* Green highlight */
+    font-weight: bold;
+}
+
+/* Layout for Content Pages (Main content + TOC) */
+.page-container {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Table of Contents (TOC) */
+aside#toc {
+    flex: 0 0 250px;
+    padding: 20px;
+    background: #e9ecef;
+    border-radius: 8px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+aside#toc h2 {
+    color: #343a40;
+    border-bottom: 2px solid #adb5bd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+aside#toc ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside#toc a {
+    text-decoration: none;
+    color: #007bff;
+    display: block;
+    padding: 5px 0;
+}
+
+/* Content Area */
+main {
+    flex-grow: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Code Formatting */
+.code-example {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #212529; /* Dark background for code */
+    color: #f8f9fa;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+pre {
+    margin: 0;
+}
+
+.tag-section {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #ced4da;
+}
+
+.tag-section h3 {
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+/* Thumbnails on Index Page */
+.language-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 28%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card img.thumbnail {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5em 0;
+    background: #343a40;
+    color: white;
+    margin-top: 40px;
+}

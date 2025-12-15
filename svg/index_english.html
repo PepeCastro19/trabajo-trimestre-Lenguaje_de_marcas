@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../recursos/style/style.css">
+    <title>Web4U - SVG: 5 Key Tags</title>
+    
+    <meta name="description" content="Detailed information about 5 key SVG tags: svg, circle, rect, g, and path.">
+    <meta name="keywords" content="SVG, Vector Graphics, Tags, Code, Tutorial">
+    <meta name="author" content="IES La Marisma, 1Q 2025/26 Practice">
+
+    <link rel="stylesheet" href="../style/style.css">
+    
+    <link rel="alternate" hreflang="es" href="index.html" /> 
+</head>
+<body>
+    <header>
+        <h1>SVG: Scalable Vector Graphics</h1>
+        <nav aria-label="Site Navigation" class="main-nav">
+            <a href="../index_english.html" title="Go back to the home page">🏠 Home</a>
+            <span>/</span>
+            <a href="index_english.html" class="active" title="You are in the SVG section">SVG</a>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <aside id="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#svg-tag" title="Jump to the explanation of the svg tag">1. Tag `&lt;svg&gt;`</a></li>
+                <li><a href="#circle-tag" title="Jump to the explanation of the circle tag">2. Tag `&lt;circle&gt;`</a></li>
+                <li><a href="#rect-tag" title="Jump to the explanation of the rect tag">3. Tag `&lt;rect&gt;`</a></li>
+                <li><a href="#g-tag" title="Jump to the explanation of the g tag">4. Tag `&lt;g&gt;`</a></li>
+                <li><a href="#path-tag" title="Jump to the explanation of the path tag">5. Tag `&lt;path&gt;`</a></li>
+            </ul>
+            
+            <hr>
+            
+            <p>
+                <strong>Resources:</strong><br>
+                <a href="svg_info.pdf" target="_blank" title="Download content in PDF (External resource)">⬇️ Download PDF</a>
+            </p>
+        </aside>
+
+        <main>
+            <h2>5 Essential SVG Tags</h2>
+
+            <section id="svg-tag" class="tag-section">
+                <h3>1. Tag `&lt;svg&gt;`</h3>
+                
+                <h4>Use Case</h4>
+                <p>It is the main container for all graphics. It defines the canvas, width, height, and the coordinate system (viewBox) where vectors will be drawn.</p>
+                
+                <h4>Example Code</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;svg width="200" height="200" viewBox="0 0 100 100"&gt;
+    &lt;!-- Graphic content would go here --&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>More Information</h4>
+                <a href="https://www.w3.org/TR/SVG2/struct.html#SVGElement" target="_blank" title="W3C Documentation on the SVG tag">W3C: Element `&lt;svg&gt;`</a>
+            </section>
+
+            <section id="circle-tag" class="tag-section">
+                <h3>2. Tag `&lt;circle&gt;`</h3>
+                
+                <h4>Use Case</h4>
+                <p>Used to draw simple circles. It is defined by a center point (cx, cy) and a radius (r).</p>
+                
+                <h4>Example Code</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>More Information</h4>
+                <a href="https://www.w3.org/TR/SVG2/shapes.html#CircleElement" target="_blank" title="W3C Documentation on the Circle tag">W3C: Element `&lt;circle&gt;`</a>
+            </section>
+
+            <section id="rect-tag" class="tag-section">
+                <h3>3. Tag `&lt;rect&gt;`</h3>
+                
+                <h4>Use Case</h4>
+                <p>Draws rectangles. The top-left corner position (x, y), width, and height are specified. It also allows for rounded corners.</p>
+                
+                <h4>Example Code</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;svg width="150" height="100"&gt;
+    &lt;rect x="10" y="10" width="100" height="50" fill="blue" /&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>More Information</h4>
+                <a href="https://www.w3.org/TR/SVG2/shapes.html#RectElement" target="_blank" title="W3C Documentation on the Rect tag">W3C: Element `&lt;rect&gt;`</a>
+            </section>
+
+            <section id="g-tag" class="tag-section">
+                <h3>4. Tag `&lt;g&gt;`</h3>
+                
+                <h4>Use Case</h4>
+                <p>Used to group multiple SVG elements. It is very useful for applying styles (like stroke color) or transformations (rotate, move) to several objects at once.</p>
+                
+                <h4>Example Code</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;svg width="200" height="200"&gt;
+    &lt;g fill="none" stroke="green" stroke-width="5"&gt;
+        &lt;circle cx="50" cy="50" r="25" /&gt;
+        &lt;circle cx="100" cy="50" r="25" /&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>More Information</h4>
+                <a href="https://www.w3.org/TR/SVG2/struct.html#GElement" target="_blank" title="W3C Documentation on the Group tag">W3C: Element `&lt;g&gt;`</a>
+            </section>
+
+            <section id="path-tag" class="tag-section">
+                <h3>5. Tag `&lt;path&gt;`</h3>
+                
+                <h4>Use Case</h4>
+                <p>It is the most powerful tool in SVG. It allows drawing complex shapes using a series of drawing commands (Move, Line, Curve, Close) within the `d` attribute.</p>
+                
+                <h4>Example Code</h4>
+                <div class="code-example">
+                    <pre><code>
+&lt;svg width="100" height="100"&gt;
+    &lt;!-- Draws a triangle --&gt;
+    &lt;path d="M 50 10 L 90 90 L 10 90 Z" fill="orange" /&gt;
+&lt;/svg&gt;
+                    </code></pre>
+                </div>
+
+                
+                <h4>More Information</h4>
+                <a href="https://www.w3.org/TR/SVG2/paths.html#PathElement" target="_blank" title="W3C Documentation on the Path tag">W3C: Element `&lt;path&gt;`</a>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p><a href="#toc" title="Back to top">↑ Top</a></p>
+        <p>&copy; 2025 Web4U. Markup Languages Practice. IES La Marisma.</p>
+    </footer>
+</body>
+</html>
